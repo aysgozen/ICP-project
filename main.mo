@@ -20,15 +20,15 @@ actor {
         isRead: Bool;
     };
 
-    // Mevcut HashMap'ler
+    
     let phoneBook = Map.HashMap<Name, Entry>(0, Text.equal, Text.hash);
     let MessageHistory = Map.HashMap<Phone, Message>(0, Text.equal, Text.hash);
     
-    // Yeni HashMap'ler
+  
     let userGroups = Map.HashMap<Text, [Name]>(0, Text.equal, Text.hash);
     let blockedContacts = Map.HashMap<Phone, [Phone]>(0, Text.equal, Text.hash);
 
-    // Mevcut fonksiyonlar
+    
     public func insert(name: Name, entry: Entry): async () {
         let newEntry = {
             desc = entry.desc;
